@@ -4,6 +4,7 @@ import com.bence.mate.models.Message;
 
 import javax.websocket.EndpointConfig;
 import javax.websocket.Encoder;
+import java.time.LocalTime;
 import javax.json.Json;
 
 public class MessageEncoder implements Encoder.Text<Message> {
@@ -11,11 +12,10 @@ public class MessageEncoder implements Encoder.Text<Message> {
     @Override
     public String encode(final Message message) {
         return Json.createObjectBuilder()
-                .add("message", message.getContent())
+                .add("content", message.getContent())
                 .add("sender", message.getSender())
-                .add("received", "")
-                .build()
-                .toString();
+                .add("received", LocalTime.now().toString())
+                .build().toString();
     }
 
     @Override

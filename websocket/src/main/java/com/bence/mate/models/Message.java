@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Setter;
 import lombok.Getter;
 
-import java.util.Date;
+import java.time.LocalTime;
 import java.util.Objects;
 
 @Builder
@@ -24,7 +24,11 @@ public class Message {
 
     @Getter
     @Setter
-    private Date received;
+    private String received;
+
+    public Message(String content, String sender) {
+        this(content, sender, LocalTime.now().toString());
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -39,5 +43,14 @@ public class Message {
     @Override
     public int hashCode() {
         return Objects.hash(content, sender, received);
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "content='" + content + '\'' +
+                ", sender='" + sender + '\'' +
+                ", received='" + received + '\'' +
+                '}';
     }
 }
