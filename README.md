@@ -22,8 +22,8 @@
 
 **Process of opening WS protocol**
 - HTTP request
-- 3 Way Handsake
-- Upgrade to HTTP to TCP
+- 3 Way Handshake
+- Upgrade HTTP to TCP
 
 **With and without SSL**
 - ws://address?url=ecneb
