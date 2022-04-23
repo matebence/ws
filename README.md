@@ -4,7 +4,7 @@
 - Cross Frame communication
 	- Useage of iframe tag from HTML
 - Polling
-	- Request are periodically send to the server
+	- Requests are periodically send to the server
 - Long Polling
 	- The server connection stays open
 	- Unidirectional, only the server send the data
