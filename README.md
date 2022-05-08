@@ -53,6 +53,13 @@
 - Same as any Web app, the first HTTP request has to be authenticated
 - After authentication the HTTP protocol is upgraded to TCP
 
+**Annoatations**
+- @ServerEndpoint - Configuring WS endpoint
+- @OnOpen - Handling sessions open state
+- @OnMessage - Handling messages
+- @OnClose - Handling sessions close state
+- @OnError - Handling sessions error state
+
 > #### Wildfly setup
 
 ```bash
