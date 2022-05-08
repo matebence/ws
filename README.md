@@ -4,7 +4,7 @@
 - Cross Frame communication
 	- Useage of iframe tag from HTML
 - Polling
-	- Request are periodically send to the server
+	- Requests are periodically send to the server
 - Long Polling
 	- The server connection stays open
 	- Unidirectional, only the server send the data
@@ -22,8 +22,8 @@
 
 **Process of opening WS protocol**
 - HTTP request
-- 3 Way Handsake
-- Upgrade to HTTP to TCP
+- 3 Way Handshake
+- Upgrade HTTP to TCP
 
 **With and without SSL**
 - ws://address?url=ecneb
@@ -48,6 +48,17 @@
 **Apps**
 - [Console](https://github.com/matebence/ws/tree/master)
 - [Web](https://github.com/matebence/ws/tree/web-app)
+
+**Security**
+- Same as any Web app, the first HTTP request has to be authenticated
+- After authentication the HTTP protocol is upgraded to TCP
+
+**Annoatations**
+- @ServerEndpoint - Configuring WS endpoint
+- @OnOpen - Handling sessions open state
+- @OnMessage - Handling messages
+- @OnClose - Handling sessions close state
+- @OnError - Handling sessions error state
 
 > #### Wildfly setup
 
